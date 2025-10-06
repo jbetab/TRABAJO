@@ -12,7 +12,7 @@ using trabajo.Data;
 namespace trabajo.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251006050728_Initial")]
+    [Migration("20251006150813_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
