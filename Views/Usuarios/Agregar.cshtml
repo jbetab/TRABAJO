@@ -1,0 +1,27 @@
+@model trabajo.Models.User
+
+<div class="row">
+    <h2>agregar usuarios</h2>
+    <form asp-controller="Usuarios" asp-action="nuevo">
+        <div class="mb-3">
+            <lable>Nombre</lable>
+            <input class="form-control" asp-for="Nombre" type="text">
+        </div>
+        <div class="mb-3">
+            <lable>Documento</lable>
+            <input class="form-control" asp-for="Documento" type="text">
+        </div>
+        <div class="mb-3">
+            <lable>Correo</lable>
+            <input class="form-control" asp-for="Correo" type="text">
+        </div>
+        <div class="mb-3">
+            <lable>Telefono</lable>
+            <input class="form-control" asp-for="Telefono" type="text">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">agregar</button>
+            <a asp-controller="Usuarios" asp-action="Index" class="btn btn-warning">volver</a>
+        </div>
+    </form>
+</div>

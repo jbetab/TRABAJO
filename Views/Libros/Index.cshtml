@@ -1,0 +1,31 @@
+@model IEnumerable<trabajo.Models.Libro>
+<h1>lista libros</h1>
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Codigo</th>
+            <th>Ejemplares disponibles</th>
+            <a asp-controller="Libros" asp-action="Agregar" class="btn btn-success mb-3" >agregar</a>
+            @* <th> *@
+            @*     <button class="btn btn-warning" type="button"data-bs-toggle="modal" data-bs-target="#addProductModal"> Add</button> *@
+            @* </th> *@
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var lib in Model)
+        {
+            <tr>
+                <td>@lib.Id</td>
+                <td>@lib.Titulo</td>
+                <td>@lib.Autor</td>
+                <td>@lib.Codigo</td>
+                <td>@lib.EjemplaresDisponibles</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

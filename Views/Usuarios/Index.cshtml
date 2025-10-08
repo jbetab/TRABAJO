@@ -1,0 +1,31 @@
+@model IEnumerable<trabajo.Models.User>
+<h1>lista usuarios</h1>
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Documento</th>
+            <th>Correo</th>
+            <th>Telefono</th>
+            <a asp-controller="Usuarios" asp-action="Agregar" class="btn btn-success mb-3" >agregar</a>
+            @* <th> *@
+            @*     <button class="btn btn-warning" type="button"data-bs-toggle="modal" data-bs-target="#addProductModal"> Add</button> *@
+            @* </th> *@
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var use in Model)
+        {
+            <tr>
+                <td>@use.Id</td>
+                <td>@use.Nombre</td>
+                <td>@use.Documento</td>
+                <td>@use.Correo</td>
+                <td>@use.Telefono</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
